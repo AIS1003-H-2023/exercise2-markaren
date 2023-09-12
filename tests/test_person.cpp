@@ -3,16 +3,18 @@
 
 #include <string>
 
+#include "Person.hpp"
+
 TEST_CASE("test_person") {
 
     std::string firstName = "Jon";
     std::string lastName = "Nilsen";
     Person p(firstName, lastName);
 
-    CHECK(p.firstName() == firstName);
-    CHECK(p.lastName() == lastName);
+    CHECK(p.getFirstName() == firstName);
+    CHECK(p.getLastName() == lastName);
 
     auto fullName = firstName + " " + lastName;
-    CHECK(p.fullName() == fullName);
+    CHECK(p.getFullName() == fullName);
 
 }
